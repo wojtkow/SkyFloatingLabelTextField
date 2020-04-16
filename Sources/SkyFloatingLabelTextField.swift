@@ -588,7 +588,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
     fileprivate func updateTextColor() {
         if !isEnabled {
             super.textColor = disabledColor
-        } else if hasErrorMessage {
+        } else if hasErrorMessage && !frameTextField {
             super.textColor = textErrorColor ?? errorColor
         } else {
             super.textColor = cachedTextColor
